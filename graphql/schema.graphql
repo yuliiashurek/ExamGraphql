@@ -1,0 +1,23 @@
+type Exam {
+    id: ID!
+    lastName: String!
+    group: String!
+    subject: String!
+    ticketNumber: Int
+    grade: Int
+    instructor: String!
+    createdAt: String!
+    updatedAt: String!
+  }
+  
+  type Query {
+    exams: [Exam!]!
+    exam(id: ID!): Exam
+  }
+  
+  type Mutation {
+    createExam(lastName: String!, group: String!, subject: String!, ticketNumber: Int, grade: Int, instructor: String!): Exam!
+    updateExam(id: ID!, lastName: String, group: String, subject: String, ticketNumber: Int, grade: Int, instructor: String): Exam!
+    deleteExam(id: ID!): String!
+  }
+  
